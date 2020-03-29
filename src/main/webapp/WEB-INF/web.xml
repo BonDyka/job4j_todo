@@ -1,0 +1,36 @@
+<web-app>
+  <display-name>Todo list</display-name>
+
+    <listener>
+        <listener-class>
+            ru.job4j.hiber.controllers.listeners.DBCreator
+        </listener-class>
+    </listener>
+
+  <servlet>
+      <servlet-name>View</servlet-name>
+      <servlet-class>ru.job4j.hiber.controllers.ViewController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>View</servlet-name>
+      <url-pattern>/view</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+      <servlet-name>Create</servlet-name>
+      <servlet-class>ru.job4j.hiber.controllers.CreateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Create</servlet-name>
+      <url-pattern>/create</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+      <servlet-name>Edit</servlet-name>
+      <servlet-class>ru.job4j.hiber.controllers.EditController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Edit</servlet-name>
+      <url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+</web-app>

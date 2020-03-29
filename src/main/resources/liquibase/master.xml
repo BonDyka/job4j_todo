@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="001" author="abondarev">
+        <sql>
+            CREATE TABLE IF NOT EXISTS items (
+                id SERIAL PRIMARY KEY NOT NULL,
+                description VARCHAR(255) NOT NULL,
+                created TIMESTAMP NOT NULL,
+                done BOOLEAN NOT NULL
+            );
+            INSERT INTO items(description, created, done) VALUES ('Test description', now(), false);
+            INSERT INTO items(description, created, done) VALUES ('Done test description', now(), true);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

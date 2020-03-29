@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TODO LIST</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div id="main">
+    <h1>TODO LIST APP</h1>
+    <div id="create_form">
+        <h3>Create Item Form</h3>
+        <form>
+            <div class="form-group">
+                <label for="desc">Description: </label>
+                <textarea id="desc" class="form-item" name="description" rows="4" cols="50"
+                          placeholder="Enter TODO description..." required="required"></textarea>
+            </div>
+            <div class="form-group">
+                <input class="form-item" type="button" value="Create">
+            </div>
+        </form>
+    </div>
+    <div id="data_view">
+        <div id="list">
+            <h3>Items List</h3>
+            <div id="check">
+                <label for="show">Show all</label>
+                <input id="show" type="checkbox" name="show_all">
+            </div>
+            <table>
+                <tr>
+                    <th>Item Id</th>
+                    <th>Description</th>
+                    <th>Create date</th>
+                    <th>Done</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
